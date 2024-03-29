@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Configuração do documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the number</title>
+  <!-- Link para o arquivo CSS externo para estilização -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho principal da página -->
+  <h1>Guess the number</h1>
+
+  <!-- Contêiner principal de conteúdo -->
+  <div id="mainBox">
+    <!-- Descrição das regras do jogo -->
+    <p>
+      Bem-vindo ao Guess the number!. O programa gera um número aleatório de 1 a 100. Seu desafio é
+      adivinhar o número gerado através de palpites com números inteiros dentro do intervalo de 1 a 100, sem repetições.
+      O feedback será dado por meio das cores:
+    </p>
+    <ul>
+      <li> Barra verde: Seu palpite está "frio" e o número real é maior.</li>
+      <li> Barra amarela: Seu palpite está "quente" e o número real é menor.</li>
+      <li> Barra preta: Parabéns! Você acertou o número.</li>
+      <li> Barra vermelha: O jogo terminou. Você atingiu o limite de palpites sem acertar o número.</li>
+    </ul>
+    <!-- Área para entrada do usuário, feedback e interações do jogo -->
+    <div id="areaDosTestes">
+      <!-- Rótulo e campo de entrada para palpites -->
+      <label for="camPalp">Digite seu palpite: </label>
+      <input type="text" id="campoPalpite" />
+
+      <!-- Botão de envio para verificar o palpite -->
+      <input type="submit" id="enviarPalpite" value="Verificar" />
+
+      <!-- Área de exibição para palpites anteriores -->
+      <p id="palpites"></p>
+
+      <!-- Área de feedback para quente/frio/correto -->
+      <div id="nivelQuenteFrio"></div>
+    </div>
+  </div>
+
+  <!-- Link para o arquivo JavaScript externo para interatividade -->
+  <script src="./js/scripts.js" defer></script>
+</body>
+
+</html>
